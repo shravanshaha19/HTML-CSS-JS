@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>MS Office Ribbon</title>
+    <link rel="stylesheet" href="Font Change.css" />
+</head>
+
+<body>
+	<div id="ribbon">
+		<div id="font">
+      <div id="font-face"><u><p id="show">Fonts <sup>&darr;</sup></p></u>
+				<select id="face" onclick='chFont()'>
+<!--     Font Names       -->
+          <option disabled selected>Select Fonts<option>
+					<option value="arial">Arial</option>
+					<option value="Adobe Arabic">Adobe Arabic</option>
+					<option value="Adobe Caslon Pro">Adobe Caslon Pro</option>
+					<option value="Adobe Devanagari">Adobe Devanagari</option>
+					<option value="Adobe Fan Heiti Std">Adobe Fan Heiti Std</option>
+					<option value="Adobe Fangsong Std">Adobe Fangsong Std</option>
+					<option value="Adobe Garamond Pro">Adobe Garamond Pro</option>
+					<option value="Adobe Gothic Std">Adobe Gothic Std</option>
+          <option value="Arial, sans-serif">Arial, sans-serif</option>
+          <option value="Helvetica, sans-serif">Helvetica, sans-serif</option>
+          <option value="Verdana, sans-serif">Verdana, sans-serif</option>
+          <option value="Trebuchet MS, sans-serif">Trebuchet MS, sans-serif</option>
+          <option value="Gill Sans, sans-serif">Gill Sans, sans-serif</option>
+          <option value="Noto Sans, sans-serif">Noto Sans, sans-serif</option>
+          <option value="Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif">Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif</option>
+          <option value="Optima, sans-serif">Optima, sans-serif</option>
+          <option value="Arial Narrow, sans-serif">Arial Narrow, sans-serif</option>
+          <option value="Times, Times New Roman, serif">Times, Times New Roman, serif</option>
+          <option value="Didot, serif">Didot, serif</option>
+          <option value="Georgia, serif">Georgia, serif</option>
+          <option value="Palatino, URW Palladio L, serif">Palatino, URW Palladio L, serif</option>
+          <option value="Bookman, URW Bookman L, serif">Bookman, URW Bookman L, serif</option>
+          <option value="New Century Schoolbook, TeX Gyre Schola, serif">New Century Schoolbook, TeX Gyre Schola, serif</option>
+          <option value="American Typewriter, serif">American Typewriter, serif</option>
+				</select>
+			</div>
+      
+<!--       font size -->
+      
+			<div id="font-size">
+        <select type="text" id="unit" oninput="chFnSize()" required>          
+          <optgroup label="Absolute Units">
+            <option value="px">px</option>
+            <option value="pt">pt</option>
+            <option value="pc">pc</option>
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
+            <option value="in">in</option>
+          </optgroup>
+          <optgroup label="Relative Units">
+            <option value="%">%</option>
+            <option value="em">em</option>
+            <option value="rem">rem</option>
+            <option value="ch">ch</option>
+            <option value="vh">vh</option>
+            <option value="vw">vw</option>
+            <option value="vmin">vmin</option>
+            <option value="vmax">vmax</option>
+            <option value="ex">ex</option>
+          </optgroup>
+        </select>
+        <input type="text" size="3" oninput="chFnSize(this.value)" value="16" id="Size" required>
+			</div>
+			<div id="size-incrDiv">
+				<button id="size-incr" onclick="size_incr()">A<sup>&uarr;</sup></button>
+			</div>
+			<div id="size-dicrDiv">
+				<button id="size-dicr" onclick="size_dicr()">A<sup>&darr;</sup></button>
+			</div>
+			<div id="font-case">
+				<button onclick="uppercase()" value="uppercase">ABC</button>
+				<button onclick="lowercase()" value="lowerrcase">abc</button>
+        <button onclick="capitalize()" value="capitalize">Abc</button>
+			</div>
+		</div>
+	</div>
+	<br>
+	<!-- 	input area -->
+	<div id="input" contenteditable="true">
+    abc...xyz
+	</div>
+    <script src="Font Change.js"></script>
+</body>
+</html>
